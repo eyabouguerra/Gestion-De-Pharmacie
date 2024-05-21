@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FXMLMedicamentController">
+   <children>
+      <Text layoutX="252.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Listes Des Medicaments">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="23.0" layoutY="112.0" prefHeight="354.0" prefWidth="264.0" style="-fx-background-color: beige;">
+         <children>
+            <Label fx:id="codeMed" layoutX="16.0" layoutY="77.0" style="-fx-background-color: white;" text="Code Med" />
+            <Label fx:id="libelleMed" layoutX="14.0" layoutY="126.0" style="-fx-background-color: white;" text="Libelle Med" />
+            <Label fx:id="categorieMed" layoutX="10.0" layoutY="167.0" style="-fx-background-color: white;" text="Categorie Med" />
+            <Label fx:id="prixMed" layoutX="24.0" layoutY="208.0" style="-fx-background-color: white;" text="Prix Med" />
+            <Label fx:id="qteStock" layoutX="14.0" layoutY="243.0" style="-fx-background-color: white;" text="Qte Stock" />
+            <TextField fx:id="txtCodeMed" layoutX="90.0" layoutY="73.0" style="-fx-background-color: white;" />
+            <TextField fx:id="txtLibelle" layoutX="90.0" layoutY="122.0" style="-fx-background-color: white;" />
+            <TextField fx:id="txtCat" layoutX="90.0" layoutY="163.0" style="-fx-background-color: white;" />
+            <TextField fx:id="txtPrix" layoutX="90.0" layoutY="204.0" style="-fx-background-color: white;" />
+            <TextField fx:id="txtQte" layoutX="90.0" layoutY="239.0" style="-fx-background-color: white;" />
+            <Label layoutX="10.0" layoutY="276.0" style="-fx-background-color: white;" text="Type Med" textFill="#000000ab" />
+            <TextField fx:id="txtType" layoutX="90.0" layoutY="272.0" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tv" layoutX="299.0" layoutY="164.0" prefHeight="200.0" prefWidth="487.0">
+         <columns>
+            <TableColumn fx:id="colCodMed" prefWidth="75.0" text="Code Med" />
+            <TableColumn fx:id="colLibelle" prefWidth="75.0" text="Libelle Med" />
+            <TableColumn fx:id="colCategorie" prefWidth="75.0" text="Categorie Med" />
+            <TableColumn fx:id="colPrix" prefWidth="75.0" text="Prix Med" />
+            <TableColumn fx:id="colQte" prefWidth="75.0" text="Qte" />
+            <TableColumn fx:id="colType" prefWidth="75.0" text="Type" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnAjouter" layoutX="18.0" layoutY="482.0" mnemonicParsing="false" onAction="#ajouter" text="Add Medicament" />
+      <Button fx:id="btnModifier" layoutX="142.0" layoutY="482.0" mnemonicParsing="false" onAction="#modifier" style="-fx-background-color: green;" text="Update Medicament" />
+      <Button fx:id="btnArchiver" layoutX="299.0" layoutY="482.0" mnemonicParsing="false" onAction="#archiver" style="-fx-background-color: red;" text="Delete Medicament" />
+   </children>
+</AnchorPane>
